@@ -24,7 +24,7 @@ class LinkedList:
         
         
     def insert(self,val,pos):
-        if(list.head.next==None):
+        if(list.head.next==list.head):
             list.append(val)
         else:
             temp=Node(val)
