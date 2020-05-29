@@ -28,7 +28,7 @@ class LinkedList:
             npos=0
             p=list.head
             q=list.head.next
-            while(npos==pos-1):
+            while(npos!=pos-1):
                 p=p.next
                 q=q.next
                 npos=npos+1
