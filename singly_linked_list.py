@@ -46,7 +46,7 @@ class LinkedList:
                 p=p.next
                 if(q.next==None):
                     print("exceeded noeds")
-                    break
+                    return
                 q=q.next
                 npos=npos+1
             p.next=q.next
