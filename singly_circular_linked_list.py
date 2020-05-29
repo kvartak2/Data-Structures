@@ -23,19 +23,21 @@ class LinkedList:
         temp.next=list.head
         
         
-    def removeNthFromEnd(self, n):
-        temp=list.head
-        if(temp.next==list.head):
-            print("only head exist")
+    def insert(self,val,pos):
+        if(list.head.next==None):
+            list.append(val)
         else:
-            p=q=list.head
-            pos=1
-            while(q.next!=list.head):
+            temp=Node(val)
+            npos=0
+            p=list.head
+            q=list.head.next
+            while(npos!=pos-1):
+                p=p.next
                 q=q.next
-                pos=pos+1
-            #print(pos)
-            tobedelete=pos-n
-            list.delete(tobedelete)
+                npos=npos+1
+            p.next=temp
+            temp.next=q
+
             
     
     def delete(self,pos):
@@ -76,14 +78,10 @@ list.append(50)
 list.printlist()
 print("---------")
 
-list.append(60)
+list.insert(22,2)
 list.printlist()
 print("---------")
 
 list.delete(3)
-list.printlist()
-print("---------")
-
-list.removeNthFromEnd(4)
 list.printlist()
 print("---------")
